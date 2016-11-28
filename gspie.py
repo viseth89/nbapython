@@ -1,4 +1,3 @@
-
 """
 Created on Sat Nov 19 22:43:46 2016
 
@@ -145,3 +144,15 @@ print (min(ast))
 print ('opponent')
 print (oorb)
 
+#pie part
+slices = 10,20,30,15
+cols=['c','m','r','b']
+players=['pippen','jordan','kerr','kukoc']
+
+plt.pie(slices,
+        labels=players,
+        colors=cols,
+        startangle=90,
+        shadow=True,
+        explode=(0,0.1,0,0),
+        autopct='%1.1f%%')
