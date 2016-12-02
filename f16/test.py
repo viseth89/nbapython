@@ -9,12 +9,13 @@ Created on Fri Dec  2 11:14:47 2016
 1
 2
 import pandas
-data_df = pandas.read_csv('in_data.csv')
+data_df = pandas.read_csv('gs3.csv')
 
-print(data_df.columns)
+starters = data_df.iloc[0:5,:]
 
-colHH = data_df['colHH']
-Or if the column name is a valid Python variable name:
+print(data_df['MP'])
+print(data_df.shape)
 
-1
-colHH = data_df.colHH
+
+print('starters')
+print(starters)
