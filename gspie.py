@@ -46,6 +46,11 @@ with open ('gs2016e.csv') as csvfile:
     dblk=[]
     dto=[]
 
+#trial w and l
+
+    w=[]
+    l=[]
+
 
     #Pulling the Data from the CSV File a bit of trial and error to find the right columns, aprox 30,
     for row in readCSV:
@@ -58,6 +63,8 @@ with open ('gs2016e.csv') as csvfile:
         steal = row[8]
         block = row[9]
         turno = row[10]
+
+        v=row[2]
 
     #Creating for Opponents
     
@@ -87,6 +94,8 @@ with open ('gs2016e.csv') as csvfile:
         oblk.append(oblock)
         oto.append(oturno)
         
+        
+        # computing
         dpts.append(int(points)-int(opoints))
         dorb.append(int(offenserb)-int(ooffenserb))
         dtrb.append(int(totalrb)-int(ototalrb))
