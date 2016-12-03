@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Fri Dec  2 13:06:34 2016
 
 TODO :
     
@@ -32,54 +29,34 @@ cc7 = pandas.read_csv('cc7.csv')
 gs7 = pandas.read_csv('gs7.csv')
 
 
-games = [cc1, gs1, cc2]
-assists = []
-for game in games:
-    print("Teamstats")
-    print(game.iloc[-1,:])
-    assists.append(int(game.iloc[-1,-7]))
-    
-#returning objects to list
-'''
-print("Cleveland Teamstats")
-print(cc1.iloc[-1,:])
-print("Cleveland Assists")
 cc1a = int(cc1.iloc[-1,-7])
 
-print("Cleveland Teamstats")
-print(cc2.iloc[-1,:])
-print("Cleveland Assists")
 cc2a = int(cc2.iloc[-1,-7])
 
-print("Cleveland Teamstats")
-print(cc3.iloc[-1,:])
-print("Cleveland Assists")
 cc3a = int(cc3.iloc[-1,-7])
 
-print("Cleveland Teamstats")
-print(cc4.iloc[-1,:])
-print("Cleveland Assists")
 cc4a = int(cc4.iloc[-1,-7])
 
-print("Cleveland Teamstats")
-print(cc5.iloc[-1,:])
-print("Cleveland Assists")
 cc5a = int(cc5.iloc[-1,-7])
 
-print("Cleveland Teamstats")
-print(cc6.iloc[-1,:])
-print("Cleveland Assists")
 cc6a = int(cc6.iloc[-1,-7])
 
-print("Cleveland Teamstats")
-print(cc7.iloc[-1,:])
-print("Cleveland Assists")
 cc7a = int(cc7.iloc[-1,-7])
-'''
+
 #Last of Cleveland
 
 cassists = cc1a + cc2a + cc3a + cc4a + cc5a + cc6a + cc7a
-print (cassists/7)
+
+ccassists = {"Game 1 Assist" : cc1a, 
+             "Game 2 Assist" : cc2a, 
+             "Game 3" : cc3a,
+             "Game 4" : cc4a,
+             "Game 5" : cc5a,
+             "Game 6" : cc6a,
+             "Game 7" : cc7a,}
+
+print (ccassists["Game 3"] + ccassists["Game 4"])
+print (ccassists)
 
 # find the count of cassists so we can divide by 7 using programming
 
