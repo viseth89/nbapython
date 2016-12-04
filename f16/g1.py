@@ -32,13 +32,16 @@ cc7 = pandas.read_csv('cc7.csv')
 gs7 = pandas.read_csv('gs7.csv')
 
 
-games = [cc1, gs1, cc2]
+games = [cc1, gs1, cc2, gs2, cc3, gs3]
 assists = []
 for game in games:
     print("Teamstats")
     print(game.iloc[-1,:])
     assists.append(int(game.iloc[-1,-7]))
     
+    #Create a game class
+print (assists)
+print('viseth')
 #returning objects to list
 '''
 print("Cleveland Teamstats")
