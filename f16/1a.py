@@ -58,17 +58,18 @@ print (crebounds)
 print('viseth')
 print(wrebounds)
 print(wassists)
-
+#Addding of two lists
 total = [sum(x) for x in zip(cassists, wassists)]
 print ('total for assists')
 print (total)
 rebounds = [m - n for m,n in zip(crebounds,wrebounds)]
-            
+      #adding and subtracting zip method of two lists      
 reboundz = [m + n for m,n in zip(crebounds,wrebounds)]
 print ('rebounds')
 print (rebounds)
 print ('reboundz')
 print (reboundz)
+
  
 
 #returning objects to list
