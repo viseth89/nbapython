@@ -29,7 +29,7 @@ gs6 = pd.read_csv('gs6.csv')
 cc7 = pd.read_csv('cc7.csv')
 gs7 = pd.read_csv('gs7.csv')
 
-
+#Creating a list to hold the games with empty variables to store the stats
 cavs = [cc1,cc2,cc3,cc4,cc5,cc6,cc7]
 cpts = []
 crbs = []
@@ -37,6 +37,7 @@ cast = []
 cstl = []
 corbs = []
 
+#Creating a list to hold the games with empty variables to store the stats
 wars = [gs2,gs2,gs3,gs4,gs5,gs6,gs7]
 wpts = []
 wrbs = []
@@ -44,6 +45,8 @@ wast = []
 wstl = []
 worbs = []
 
+
+#For Loop to iterate through each game in the list, appending the stats to the empty variables created.
 for game in cavs:
     cast.append(game.iloc[-1,-7])
     cstl.append(game.iloc[-1,-6])
@@ -65,44 +68,26 @@ for game in wars:
     worbs.append(game.iloc[-1,-10])
     wpts.append(game.iloc[-1,-2])
     
-plt.plot(games,cpts,'g')
-plt.plot(games,cast,'c')
-plt.plot(games,crbs,'r')
-plt.plot(games,corbs,'m')
-plt.plot(games,cstl,'b')
+plt.plot(games,cpts,'g', label = 'Points')
+plt.plot(games,cast,'c', label = 'Assists')
+plt.plot(games,crbs,'r', label = 'Rebounds')
+plt.plot(games,corbs,'m', label = 'O Rebounds')
+plt.plot(games,cstl,'b', label = 'Steals')
 
+plt.xlabel('Game for C')
+plt.legend()
 plt.show()
 
 plt.plot(games,wpts,'g',label ='Pts')
 plt.plot(games,wast,'c',label='Assist')
 plt.plot(games,wrbs,'r', label = 'Rebounds')
-plt.plot(games,worbs,'m', label = 'O Rebound')
+plt.plot(games,worbs,'m', label = 'O Rebounds')
 plt.plot(games,wstl,'b', label = 'Steals')
 
 
 plt.xlabel('Game')
 plt.legend()
 plt.show()
-
-    
-'''
-plt.plot(yr,pts,'g',label='points', linewidth=5)
-plt.plot(yr,ast,'c',label='assists',linewidth=5)
-plt.plot(yr,trb,'r',label='rebounds',linewidth=5)
-plt.plot(yr,stl,'m',label='steals',linewidth=5)
-
-#Labeling the Outside of the chart
-plt.title('Charles Barkley\nRound Mound of Rebound')
-plt.ylabel('Statistics')
-plt.xlabel('Year')
-
-#Showing the Legend for the chart
-plt.legend()
-
-plt.grid(True,color='k')
-#Showing Chart?
-plt.show()
-'''
 
 '''
 >>> df.recency
