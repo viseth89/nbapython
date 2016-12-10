@@ -37,6 +37,11 @@ cast = []
 cstl = []
 corbs = []
 
+vs = []
+vt = []
+count=[]
+#creating temp variables
+
 #Creating a list to hold the games with empty variables to store the stats
 wars = [gs2,gs2,gs3,gs4,gs5,gs6,gs7]
 wpts = []
@@ -53,7 +58,36 @@ for game in cavs:
     crbs.append(game.iloc[-1,-8])
     corbs.append(game.iloc[-1,-10])
     cpts.append(game.iloc[-1,-2])
+    vs.append(game.tail(1)['PTS'])
+    vt.append(game.tail(1)['AST'])
+
+    '''
+    this command not working
     
+    vs.append(cc1.tail(5)['PTS'])
+    
+    but this one does?
+    
+    cc1.tail(1)['PTS']
+    
+    vs
+Out[59]: 
+[13    89
+ Name: PTS, dtype: int64, 13    77
+ Name: PTS, dtype: int64, 13    120
+ Name: PTS, dtype: int64, 13    97
+ Name: PTS, dtype: object, 13    112
+ Name: PTS, dtype: object, 13    115
+ Name: PTS, dtype: object, 8    93
+ Name: PTS, dtype: int64]
+
+cpts
+Out[60]: [89, 77, 120, '97', '112', '115', 93]
+
+want to find a different way to slice
+    
+    
+    '''
 print (cast)
 print (cstl)
 print('rebounds')
@@ -68,23 +102,27 @@ for game in wars:
     worbs.append(game.iloc[-1,-10])
     wpts.append(game.iloc[-1,-2])
     
+
+plt.figure(1)    
 plt.plot(games,cpts,'g', label = 'Points')
 plt.plot(games,cast,'c', label = 'Assists')
 plt.plot(games,crbs,'r', label = 'Rebounds')
 plt.plot(games,corbs,'m', label = 'O Rebounds')
 plt.plot(games,cstl,'b', label = 'Steals')
 
+plt.title('Cleveland Cavaliers')
 plt.xlabel('Game for C')
 plt.legend()
 plt.show()
 
+plt.figure(2)
 plt.plot(games,wpts,'g',label ='Pts')
 plt.plot(games,wast,'c',label='Assist')
 plt.plot(games,wrbs,'r', label = 'Rebounds')
 plt.plot(games,worbs,'m', label = 'O Rebounds')
 plt.plot(games,wstl,'b', label = 'Steals')
 
-
+plt.title('Golden State Warriors')
 plt.xlabel('Game')
 plt.legend()
 plt.show()
