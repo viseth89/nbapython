@@ -1,6 +1,30 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Mon Nov 21 01:47:36 2016
+
+@author: visethsen
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov 19 23:04:47 2016
+
+@author: visethsen
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov 19 23:03:08 2016
+
+@author: visethsen
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Created on Sat Nov 19 22:56:57 2016
 
 @author: visethsen
@@ -24,7 +48,7 @@ import csv
 #Simplest way to read a csv file
 #Will look to understand the more complicated ways/udacity
 #Here we opened our initial csv file
-with open ('scottiepippene.csv') as csvfile:
+with open ('1997bullsgamelong.csv') as csvfile:
     #Command to read it with arguements***** Still not fully understood
     readCSV = csv.reader(csvfile, delimiter=',')
     #Empty Variables to store the data we want to present
@@ -33,7 +57,14 @@ with open ('scottiepippene.csv') as csvfile:
     ast = []
     trb = []
     stl = []
+    win = []
+    loss = []
     
+
+
+    print row[7]
+
+'''
     #Pulling the Data from the CSV File a bit of trial and error to find the right columns, aprox 30,
     for row in readCSV:
         year = row[0]
@@ -47,6 +78,8 @@ with open ('scottiepippene.csv') as csvfile:
         ast.append(assist)
         trb.append(totalrb)
         stl.append(steal)
+        
+'''
     
     #Styles, want to understand more*****
 style.use('ggplot')
@@ -54,7 +87,7 @@ style.use('ggplot')
 
 
 # Posting of the data in a chart format
-
+'''
 #Labeling of the Lines
 plt.plot(yr,pts,'g',label='points', linewidth=5)
 plt.plot(yr,ast,'c',label='assists',linewidth=5)
@@ -62,7 +95,7 @@ plt.plot(yr,trb,'r',label='rebounds',linewidth=5)
 plt.plot(yr,stl,'m',label='steals',linewidth=5)
 
 #Labeling the Outside of the chart
-plt.title('Scottie Pippen\nMr Everything')
+plt.title('Charles Barkley\nRound Mound of Rebound')
 plt.ylabel('Statistics')
 plt.xlabel('Year')
 
@@ -72,4 +105,4 @@ plt.legend()
 plt.grid(True,color='k')
 #Showing Chart?
 plt.show()
-
+'''

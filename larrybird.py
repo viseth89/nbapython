@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Nov 19 22:56:57 2016
-
-@author: visethsen
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
 Created on Sat Nov 19 22:43:46 2016
 
 @author: visethsen
@@ -24,7 +16,7 @@ import csv
 #Simplest way to read a csv file
 #Will look to understand the more complicated ways/udacity
 #Here we opened our initial csv file
-with open ('scottiepippene.csv') as csvfile:
+with open ('larrybirde.csv') as csvfile:
     #Command to read it with arguements***** Still not fully understood
     readCSV = csv.reader(csvfile, delimiter=',')
     #Empty Variables to store the data we want to present
@@ -62,7 +54,7 @@ plt.plot(yr,trb,'r',label='rebounds',linewidth=5)
 plt.plot(yr,stl,'m',label='steals',linewidth=5)
 
 #Labeling the Outside of the chart
-plt.title('Scottie Pippen\nMr Everything')
+plt.title('Larry Bird \nLarry Legend')
 plt.ylabel('Statistics')
 plt.xlabel('Year')
 
