@@ -1,5 +1,6 @@
 # nbapython
 
-The Goal of this Repository is to make use of the available NBA - Stat API's and document and make it usable and understandable to the novice user
 
-We hope to achieve a better understanding of how to use this repository as well as tweak it to gain the knowledge to make our own
+The goal of this Repository is to show my journal as I use Python to learn about the tools such as Matplotlib, Pandas and Numpy, 
+
+I want to make it possible for those who are interested in making charts as a intro for those who are interested in getting started on data science.
