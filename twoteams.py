@@ -27,6 +27,19 @@ import pandas as pd
 # Creation of the Class Team to store all our data
 class Team:
     def __init__(self, t):
+        
+        '''
+        #I wanted to create this variable here to hold the amount of games = 82
+        #I want this to help in making of my graphs
+        
+        ## This Does not work :::     self.games= t[t['G']]
+        ## This Does          :::     self.games=t['G']
+        ## But it returns a list
+
+How come these 't[t["W/L"]=='W']' assign the whole data frame to the variables
+       
+
+        '''
         self.wins = t[t["W/L"]=='W']
         self.loss = t[t['W/L']=='L']
         self.assist_w=t[t['AST']>t['AST.1']]
